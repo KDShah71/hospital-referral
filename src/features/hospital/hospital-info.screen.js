@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import AlertComponent from "../../components/alert.component";
+import BedsTable from "../../components/bed-table.component";
 
 import DetailsCard from "../../components/card.component";
 import { HospitalContext } from "../../services/hospital/hospital.context";
@@ -74,7 +75,7 @@ function HospitalInfoScreen({ match }) {
         </p>
       </div>
 
-      <div className="card  my-5 bg-light p-3  ">
+      <div className="card  my-5 bg-light p-3 shadow-sm ">
         <BedsTable coas={COAs} />
       </div>
 
@@ -94,40 +95,3 @@ function HospitalInfoScreen({ match }) {
 }
 
 export default HospitalInfoScreen;
-
-const BedsTable = ({ coas }) => (
-  <div className="table-responsive ">
-    <table className="table table-hover table-borderless">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th className="text-center" scope="col">
-            Capacity
-          </th>
-          <th className="text-center" scope="col">
-            Occupied
-          </th>
-          <th className="text-center" scope="col">
-            Available
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {coas.map((coa, index) => {
-          const {
-            name,
-            data: { capacity, occupied, available },
-          } = coa;
-          return (
-            <tr key={index}>
-              <th scope="row">{name}</th>
-              <td className="text-center">{capacity}</td>
-              <td className="text-center">{occupied}</td>
-              <td className="text-center">{available}</td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
-  </div>
-);
