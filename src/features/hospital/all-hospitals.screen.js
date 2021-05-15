@@ -14,6 +14,8 @@ function AllHospitalsScreen() {
 
   if (isLoading) return <h2>loading...</h2>;
 
+  if (error) return <AlertComponent error={error} />;
+
   if (Object.keys(hospitals).length === 0) return null;
 
   return (
@@ -34,7 +36,6 @@ function AllHospitalsScreen() {
           />
         );
       })}
-      {error && <AlertComponent error={error} />}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { DeathContextProvider } from "../../services/death/death.context";
 import { DischargeContextProvider } from "../../services/discharge/discharge.context";
@@ -23,6 +23,7 @@ import VentilatorScreen from "../../features/ventilator/ventilator.screen";
 import AllHospitalsScreen from "../../features/hospital/all-hospitals.screen";
 import { AllHospitalsContextProvider } from "../../services/hospital/all-hospitals.contex";
 import HospitalInfoScreen from "../../features/hospital/hospital-info.screen";
+import PageNotFound from "../../features/notfound/pagenotfound.screen";
 
 const AllHospitalDisplay = () => (
   <AllHospitalsContextProvider>
@@ -84,27 +85,31 @@ function AppNavigator() {
   return (
     <Router>
       <Dashboard>
-        <Route path="/" exact component={AllHospitalDisplay} />
+        <Switch>
+          <Route path="/" exact component={AllHospitalDisplay} />
 
-        <Route path="/profile" exact component={HospitalDetailsDisplay} />
+          <Route path="/profile" exact component={HospitalDetailsDisplay} />
 
-        <Route path="/hospital/:id" exact component={HospitalInfoScreen} />
+          <Route path="/hospital/:id" exact component={HospitalInfoScreen} />
 
-        <Route path="/icus" component={IcuDisplay} />
+          <Route path="/icus" exact component={IcuDisplay} />
 
-        <Route path="/ventilators" component={VentilatorDisplay} />
+          <Route path="/ventilators" exact component={VentilatorDisplay} />
 
-        <Route path="/oxygen" component={OxygenDisplay} />
+          <Route path="/oxygen" exact component={OxygenDisplay} />
 
-        <Route path="/normal" component={NormalDisplay} />
+          <Route path="/normal" exact component={NormalDisplay} />
 
-        <Route path="/hdu" component={HduDisplay} />
+          <Route path="/hdu" exact component={HduDisplay} />
 
-        <Route path="/focal" component={FocalDisplay} />
+          <Route path="/focal" exact component={FocalDisplay} />
 
-        <Route path="/discharge" component={DischargeDisplay} />
+          <Route path="/discharge" exact component={DischargeDisplay} />
 
-        <Route path="/death" component={DeathDisplay} />
+          <Route path="/death" exact component={DeathDisplay} />
+
+          <Route component={PageNotFound} />
+        </Switch>
       </Dashboard>
     </Router>
   );

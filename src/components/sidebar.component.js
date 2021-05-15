@@ -73,10 +73,10 @@ function Sidebar() {
             height="32"
             className="rounded-circle me-2"
           />
-          <strong>mdo</strong>
+          <strong>admin</strong>
         </a>
         <ul
-          className="dropdown-menu text-small shadow"
+          className="dropdown-menu text-decoration-none  text-small shadow"
           aria-labelledby="dropdownUser2"
         >
           <li>
@@ -109,5 +109,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-
-// import { Button } from "reactstrap";
