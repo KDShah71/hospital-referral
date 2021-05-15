@@ -33,10 +33,13 @@ function DetailsCard({ title = "Title", to, data = {} }) {
               if (typeof data[key] === "number") return null;
 
               return (
-                <div key={index} className="row d-flex align-items-center py-1">
-                  <span className="col-6">{key}</span>
+                <div key={index} className="row d-flex align-items-end py-1">
+                  <span className="col-6">updated time</span>
                   <div className="col-6  d-flex justify-content-center ">
-                    {data[key].slice(0, 10)}
+                    <div className="d-flex flex-column align-items-center">
+                      <span>{data[key].slice(11, 16)}</span>{" "}
+                      <span>{data[key].slice(0, 10)}</span>
+                    </div>
                   </div>
                 </div>
               );

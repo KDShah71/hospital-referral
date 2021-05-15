@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import logo from "./assests/hospital_referral_logo.png";
 
 const routes = [
-  { route: "/profile", name: "Profile" },
+  // { route: "/profile", name: "Profile" },
   // { route: "/icus", name: "Icu" },
   // { route: "/ventilators", name: "Ventilator" },
   // { route: "/oxygen", name: "Oxygen" },
@@ -58,7 +58,8 @@ function Sidebar() {
         ))}
       </ul>
       <hr />
-      <div className="dropdown">
+
+      {/* <div className="dropdown">
         <a
           href="/#"
           className="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
@@ -104,6 +105,7 @@ function Sidebar() {
           </li>
         </ul>
       </div>
+    */}
     </div>
   );
 }
