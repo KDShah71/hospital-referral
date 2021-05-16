@@ -44,7 +44,7 @@ function HospitalCard({
             <h6 className=" m-0"> {name} </h6>
           </div>
 
-          <div className=" mb-2 d-flex justify-content-start ">
+          <div className=" mb-2 d-flex justify-content-end ">
             {icu.available !== 0 ? (
               <CheckIcu icu={icu} state={true} />
             ) : (
@@ -52,7 +52,7 @@ function HospitalCard({
             )}
           </div>
 
-          <div className="card-text my-3">
+          <div className="card-text mt-4 mb-4">
             <p className="m-0 text-muted">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
