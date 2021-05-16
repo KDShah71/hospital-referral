@@ -89,11 +89,6 @@ function HospitalInfoScreen({ match }) {
         <hr />
 
         <div className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-lg-3">
-          <DetailsCard title="ICU" data={icu} />
-          <DetailsCard title="Normal" data={normal} />
-          <DetailsCard title="Ventilators" data={ventilators} />
-          <DetailsCard title="Oxygen Plant" data={oxygen_plant} />
-          <DetailsCard title="HDU" data={hdu} />
           <DetailsCard title="Discharge" data={discharge} />
           <DetailsCard title="Death" data={death} />
           {error && <AlertComponent error={error} />}
