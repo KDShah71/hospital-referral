@@ -36,8 +36,9 @@ function DetailsCard({ title = "Title", to, data = {} }) {
                   <span className="col-6">updated time</span>
                   <div className="col-6  d-flex justify-content-center ">
                     <div className="d-flex text-muted p-14 flex-column align-items-center">
-                      <span>{data[key].slice(11, 16)}</span>{" "}
-                      <span>{data[key].slice(0, 10)}</span>
+                      <span>
+                        {data[key].slice(11, 16)} / {data[key].slice(5, 10)}
+                      </span>
                     </div>
                   </div>
                 </div>
