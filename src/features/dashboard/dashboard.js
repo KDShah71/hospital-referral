@@ -4,14 +4,14 @@ import logo from "../../components/assests/hospital_referral_logo.png";
 
 function Dashboard({ children }) {
   return (
-    <div className="container-fluid ">
+    <div className="container-fluid  ">
       <div
         style={{
           height: "100vh",
         }}
       >
-        <div className="container  m2-4 py-2 ">
-          <div className="d-flex justify-content-start  ">
+        <div className=" mb-4 pt-2 ">
+          <div className="container d-flex justify-content-start  ">
             <div className="">
               <a href="/" className="px-3 ">
                 <img src={logo} alt="hospital referral logo" width="110" />
