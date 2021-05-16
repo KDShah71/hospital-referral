@@ -21,7 +21,6 @@ function DetailsCard({ title = "Title", to, data = {} }) {
         return;
       }}
     >
-      {/* <Link to={to} style={{ color: "inherit", textDecoration: "inherit" }}> */}
       <div className="col py-3 px-4  card shadow-sm  border bg-light ">
         <h5 className="card-title"> {title} </h5>
 
@@ -56,7 +55,6 @@ function DetailsCard({ title = "Title", to, data = {} }) {
           })}
         </div>
       </div>
-      {/* </Link> */}
     </div>
   );
 }
