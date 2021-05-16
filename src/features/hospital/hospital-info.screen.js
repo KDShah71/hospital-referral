@@ -33,7 +33,7 @@ function HospitalInfoScreen({ match }) {
 
   const COAs = [
     {
-      name: "Icu",
+      name: "ICU",
       data: icu,
     },
     {
@@ -41,7 +41,7 @@ function HospitalInfoScreen({ match }) {
       data: normal,
     },
     {
-      name: "Hdu",
+      name: "HDU",
       data: hdu,
     },
 
@@ -63,7 +63,7 @@ function HospitalInfoScreen({ match }) {
   return (
     <div style={{ paddingBottom: "100px" }}>
       <div className="mb-4 mx-1 ">
-        <div className="d-flex justify-content-between pb-2">
+        <div className="d-flex justify-content-between pb-3">
           <div className="d-flex flex-column justify-content-end ">
             <p>
               <span className="h4">{name} </span>
@@ -89,12 +89,11 @@ function HospitalInfoScreen({ match }) {
         <hr />
 
         <div className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-lg-3">
-          <DetailsCard title="Icu" data={icu} />
+          <DetailsCard title="ICU" data={icu} />
+          <DetailsCard title="Normal" data={normal} />
           <DetailsCard title="Ventilators" data={ventilators} />
           <DetailsCard title="Oxygen Plant" data={oxygen_plant} />
-          <DetailsCard title="Normal" data={normal} />
           <DetailsCard title="HDU" data={hdu} />
-          {/* <DetailsCard title="Focal Person" data={focalperson} /> */}
           <DetailsCard title="Discharge" data={discharge} />
           <DetailsCard title="Death" data={death} />
           {error && <AlertComponent error={error} />}
