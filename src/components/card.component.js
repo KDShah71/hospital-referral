@@ -1,4 +1,5 @@
 import React from "react";
+import Moment from "react-moment";
 import { useHistory } from "react-router-dom";
 
 function DetailsCard({ title = "Title", to, data = {} }) {
@@ -37,7 +38,7 @@ function DetailsCard({ title = "Title", to, data = {} }) {
                   <div className="col-6  d-flex justify-content-center ">
                     <div className="d-flex text-muted p-14 flex-column align-items-center">
                       <span>
-                        {data[key].slice(11, 16)} / {data[key].slice(5, 10)}
+                        <Moment fromNow>{data[key]}</Moment>
                       </span>
                     </div>
                   </div>
