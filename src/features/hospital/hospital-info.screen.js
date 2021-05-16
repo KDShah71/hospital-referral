@@ -62,8 +62,8 @@ function HospitalInfoScreen({ match }) {
 
   return (
     <div style={{ paddingBottom: "100px" }}>
-      <div className="mb-4 mx-1">
-        <p className="d-flex justify-content-between">
+      <div className="mb-4 mx-1 ">
+        <div className="d-flex justify-content-between pb-2">
           <div className="d-flex flex-column justify-content-end ">
             <p>
               <span className="h4">{name} </span>
@@ -77,23 +77,28 @@ function HospitalInfoScreen({ match }) {
             <p className="m-0">{focalperson.phone}</p>
             <p className="m-0">{focalperson.email}</p>
           </div>
-        </p>
+        </div>
+        <hr />
       </div>
 
-      <div className="card  my-5 bg-light p-3 shadow-sm ">
-        <BedsTable coas={COAs} />
-      </div>
+      <div>
+        <div className="card my-5  bg-light p-3 shadow-sm ">
+          <BedsTable coas={COAs} />
+        </div>
 
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-lg-3">
-        <DetailsCard title="Icu" data={icu} />
-        <DetailsCard title="Ventilators" data={ventilators} />
-        <DetailsCard title="Oxygen Plant" data={oxygen_plant} />
-        <DetailsCard title="Normal" data={normal} />
-        <DetailsCard title="HDU" data={hdu} />
-        {/* <DetailsCard title="Focal Person" data={focalperson} /> */}
-        <DetailsCard title="Discharge" data={discharge} />
-        <DetailsCard title="Death" data={death} />
-        {error && <AlertComponent error={error} />}
+        <hr />
+
+        <div className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-lg-3">
+          <DetailsCard title="Icu" data={icu} />
+          <DetailsCard title="Ventilators" data={ventilators} />
+          <DetailsCard title="Oxygen Plant" data={oxygen_plant} />
+          <DetailsCard title="Normal" data={normal} />
+          <DetailsCard title="HDU" data={hdu} />
+          {/* <DetailsCard title="Focal Person" data={focalperson} /> */}
+          <DetailsCard title="Discharge" data={discharge} />
+          <DetailsCard title="Death" data={death} />
+          {error && <AlertComponent error={error} />}
+        </div>
       </div>
     </div>
   );
