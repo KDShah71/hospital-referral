@@ -63,14 +63,19 @@ function HospitalInfoScreen({ match }) {
   return (
     <div style={{ paddingBottom: "100px" }}>
       <div className="mb-4 mx-1">
-        <p className="d-flex justify-content-between pe-4">
-          <span className="d-flex  flex-column">
-            <h4>{name}</h4>
-            <p>{address}</p>
-          </span>
-          <div className="col d-flex flex-column align-items-end ">
-            <p className="m-0">{hospital_type}</p>
+        <p className="d-flex justify-content-between">
+          <div className="d-flex flex-column justify-content-end ">
+            <p>
+              <span className="h4">{name} </span>
+            </p>
+            <span>Hospital type - {hospital_type} </span>
             <p className="m-0">{phone_no}</p>
+            <p className="m-0">{address}</p>
+          </div>
+          <div className="col d-flex flex-column justify-content-end align-items-end ">
+            <p className="m-0">{focalperson.name}</p>
+            <p className="m-0">{focalperson.phone}</p>
+            <p className="m-0">{focalperson.email}</p>
           </div>
         </p>
       </div>
@@ -85,7 +90,7 @@ function HospitalInfoScreen({ match }) {
         <DetailsCard title="Oxygen Plant" data={oxygen_plant} />
         <DetailsCard title="Normal" data={normal} />
         <DetailsCard title="HDU" data={hdu} />
-        <DetailsCard title="Focal Person" data={focalperson} />
+        {/* <DetailsCard title="Focal Person" data={focalperson} /> */}
         <DetailsCard title="Discharge" data={discharge} />
         <DetailsCard title="Death" data={death} />
         {error && <AlertComponent error={error} />}

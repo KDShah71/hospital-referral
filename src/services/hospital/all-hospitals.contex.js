@@ -14,7 +14,23 @@ export const AllHospitalsContextProvider = ({ children }) => {
 
     try {
       const response = await axiosInstance.get("core/hospital/");
+      sethospitals(response.data);
+      setError(null);
+    } catch (e) {
+      console.log(e);
+      setError(e.toString());
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
+  const onSearchHospitals = async (searchText) => {
+    setIsLoading(true);
+
+    try {
+      const response = await axiosInstance.get(
+        `core/hospital/?search=${searchText}`
+      );
       sethospitals(response.data);
       setError(null);
     } catch (e) {
@@ -32,6 +48,7 @@ export const AllHospitalsContextProvider = ({ children }) => {
         error,
         hospitals,
         onGetHospitals,
+        onSearchHospitals,
       }}
     >
       {children}

@@ -10,10 +10,10 @@ function Dashboard({ children }) {
           height: "100vh",
         }}
       >
-        <div className="container  mb-5  ">
+        <div className="container  m2-4 py-2 ">
           <div className="d-flex justify-content-start  ">
             <div className="">
-              <a href="/" className="px-3">
+              <a href="/" className="px-3 ">
                 <img src={logo} alt="hospital referral logo" width="110" />
               </a>
             </div>
