@@ -18,7 +18,7 @@ const HospitalsBody = ({ hospitals }) => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container">
       <form className="d-flex justify-content-center mb-4 mx-2">
         <input
           style={{ maxWidth: "800px" }}
@@ -33,7 +33,7 @@ const HospitalsBody = ({ hospitals }) => {
         />
       </form>
 
-      <div className="row row-cols-1  row-cols-sm-2  row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3 g-lg-3">
+      <div className="row  row-cols-sm-3  row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-1 g-sm-2 g-md-2 g-lg-3">
         {searchedHospitals.map((result, index) => {
           const { name, address, phone_no, images, hospital_type, id, icu } =
             result;
