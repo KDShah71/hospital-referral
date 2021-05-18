@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import AlertComponent from "../../components/alert.component";
+import Loader from "../../components/loader.component";
 
 import { AllHospitalsContext } from "../../services/hospital/all-hospitals.contex";
 import HospitalsBody from "./body-all-hospitals";
@@ -13,13 +14,13 @@ function AllHospitalsScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (isLoading) return <h2>loading...</h2>;
-
+  if (isLoading) return <Loader />;
   if (error) return <AlertComponent error={error} />;
-
-  if (Object.keys(hospitals).length === 0) return <h3>No hospitals found</h3>;
-
-  return <HospitalsBody hospitals={hospitals} />;
+  if (Object.keys(hospitals).length !== 0) {
+    return <HospitalsBody hospitals={hospitals} />;
+  } else {
+    return <h3>No hospitals found</h3>;
+  }
 }
 
 export default AllHospitalsScreen;

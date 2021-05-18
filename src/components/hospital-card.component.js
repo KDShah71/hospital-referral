@@ -23,7 +23,8 @@ function HospitalCard({
   return (
     <div className="col" onClick={() => handleClick()}>
       <div
-        className="scale card shadow-sm  border bg-light "
+        className="animate__animated 
+        animate__fadeIn  scale card shadow-sm  border bg-light"
         style={{
           cursor: "pointer",
         }}

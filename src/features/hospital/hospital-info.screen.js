@@ -3,6 +3,7 @@ import AlertComponent from "../../components/alert.component";
 import BedsTable from "../../components/bed-table.component";
 
 import DetailsCard from "../../components/card.component";
+import Loader from "../../components/loader.component";
 import { HospitalContext } from "../../services/hospital/hospital.context";
 
 function HospitalInfoScreen({ match }) {
@@ -56,7 +57,7 @@ function HospitalInfoScreen({ match }) {
     },
   ];
 
-  if (isLoading) return <h2>loading...</h2>;
+  if (isLoading) return <Loader />;
 
   if (Object.keys(hospitalInfo).length === 0) return null;
 
@@ -91,6 +92,7 @@ function HospitalInfoScreen({ match }) {
         <div className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-lg-3">
           <DetailsCard title="Discharge" data={discharge} />
           <DetailsCard title="Death" data={death} />
+
           {error && <AlertComponent error={error} />}
         </div>
       </div>
