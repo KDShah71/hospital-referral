@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { AllHospitalsContextProvider } from "../../services/hospital/all-hospitals.contex";
 
-import Dashboard from "../../features/dashboard/dashboard";
 import AllHospitalsScreen from "../../features/hospital/all-hospitals.screen";
 import HospitalInfoScreen from "../../features/hospital/hospital-info.screen";
 import PageNotFound from "../../features/notfound/pagenotfound.screen";
+import Home from "../../features/home/home.screen";
 
 const AllHospitalDisplay = () => (
   <AllHospitalsContextProvider>
@@ -17,7 +17,7 @@ const AllHospitalDisplay = () => (
 function AppNavigator() {
   return (
     <Router>
-      <Dashboard>
+      <Home>
         <Switch>
           <Route path="/" exact component={AllHospitalDisplay} />
 
@@ -25,7 +25,7 @@ function AppNavigator() {
 
           <Route component={PageNotFound} />
         </Switch>
-      </Dashboard>
+      </Home>
     </Router>
   );
 }

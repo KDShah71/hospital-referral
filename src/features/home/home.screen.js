@@ -2,14 +2,10 @@ import React from "react";
 
 import logo from "../../components/assests/hospital_referral_logo.png";
 
-function Dashboard({ children }) {
+function Home({ children }) {
   return (
-    <div className="container-fluid  ">
-      <div
-        style={{
-          height: "100vh",
-        }}
-      >
+    <div className="container-fluid ">
+      <div>
         <div className=" mb-4 pt-2 ">
           <div className="container d-flex justify-content-start  ">
             <div className="">
@@ -35,4 +31,4 @@ function Dashboard({ children }) {
   );
 }
 
-export default Dashboard;
+export default Home;
