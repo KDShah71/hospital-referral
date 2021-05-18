@@ -22,7 +22,7 @@ function DetailsCard({ title = "Title", to, data = {} }) {
         return;
       }}
     >
-      <div className="col py-3 px-4  card shadow-sm  border bg-light ">
+      <div className="col scale py-3 px-4  card shadow-sm  border bg-light ">
         <h5 className="card-title"> {title} </h5>
 
         <div className="card-text ">
