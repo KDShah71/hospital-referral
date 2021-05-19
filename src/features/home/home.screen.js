@@ -22,13 +22,12 @@ function Home({ children }) {
 
               <div>
                 <p>
-                  Download our app from
+                  Download our app from{" "}
                   <a
                     href="https://play.google.com/store/apps/details?id=com.hcoe.lumbini_hospital"
                     // target="_blank"
                     // rel="noreferrer"
                   >
-                    {" "}
                     here
                   </a>
                 </p>
