@@ -3,6 +3,7 @@ import AlertComponent from "../../components/alert.component";
 import BedsTable from "../../components/bed-table.component";
 
 import DetailsCard from "../../components/card.component";
+import FocalDetails from "../../components/focal.component";
 import Loader from "../../components/loader.component";
 import { HospitalContext } from "../../services/hospital/hospital.context";
 
@@ -64,26 +65,18 @@ function HospitalInfoScreen({ match }) {
   return (
     <div style={{ paddingBottom: "100px" }}>
       <div className="mb-4 mx-1 ">
-        <div className="d-flex justify-content-between pb-3">
-          <div className="d-flex flex-column justify-content-end ">
-            <p>
-              <span className="h4">{name} </span>
-            </p>
-            <span>Hospital type - {hospital_type} </span>
-            <p className="m-0">{phone_no}</p>
-            <p className="m-0">{address}</p>
-          </div>
-          <div className="col d-flex flex-column justify-content-end align-items-end ">
-            <p className="m-0">{focalperson.name}</p>
-            <p className="m-0">{focalperson.phone}</p>
-            <p className="m-0">{focalperson.email}</p>
-          </div>
-        </div>
+        <FocalDetails
+          name={name}
+          address={address}
+          phone_no={phone_no}
+          hospital_type={hospital_type}
+          focalperson={focalperson}
+        />
         <hr />
       </div>
 
       <div>
-        <div className="card my-5  bg-light p-3 shadow-sm ">
+        <div className="card my-5  bg-white p-3 shadow-sm ">
           <BedsTable coas={COAs} />
         </div>
 
