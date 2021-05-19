@@ -10,7 +10,7 @@ const CheckIcu = ({ icu, state }) => {
         <span
           className={`px-3  py-1 badge  ${state ? "bg-success" : "bg-danger"} `}
         >
-          {state ? "Available" : "Full"}
+          {state ? "Available" : "N/A"}
         </span>
       </div>
       {icu && (
