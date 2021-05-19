@@ -10,6 +10,7 @@ function Loader() {
         top: 0,
         height: "100vh",
         width: "100vw",
+        backgroundColor: "#fff",
       }}
     >
       <div>
