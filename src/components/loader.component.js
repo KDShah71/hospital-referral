@@ -3,7 +3,7 @@ import React from "react";
 function Loader() {
   return (
     <div
-      class="d-flex justify-content-center align-items-center"
+      className="d-flex justify-content-center align-items-center"
       style={{
         position: "absolute",
         left: 0,
@@ -15,14 +15,14 @@ function Loader() {
     >
       <div>
         <div
-          class="spinner-border bg-white"
+          className="spinner-border bg-white"
           style={{
             width: "5rem",
             height: "5rem",
           }}
           role="status"
         >
-          <span class="visually-hidden">Loading...</span>
+          <span className="visually-hidden">Loading...</span>
         </div>
       </div>
     </div>

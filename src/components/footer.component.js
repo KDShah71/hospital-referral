@@ -9,7 +9,7 @@ function Footer() {
       }}
     >
       <div className="py-5 p-14 dark-color-50">
-        <p class=" m-0">Powered by EGT </p>
+        <p className=" m-0">Powered by EGT </p>
       </div>
     </div>
   );
