@@ -1,6 +1,7 @@
 import React from "react";
 
 import logo from "../../components/assests/hospital_referral_logo.png";
+import QR from "../../components/assests/hrs_mobile_app_qr.jpeg";
 import Footer from "../../components/footer.component";
 
 function Home({ children }) {
@@ -20,17 +21,15 @@ function Home({ children }) {
                 <span> By Lumbini Hospitals</span>
               </div>
 
-              <div>
-                <p>
-                  Download our app from{" "}
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.hcoe.lumbini_hospital"
-                    // target="_blank"
-                    // rel="noreferrer"
-                  >
-                    here
-                  </a>
-                </p>
+              <div className="d-flex flex-column align-items-center px-2">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.hcoe.lumbini_hospital"
+                  // target="_blank"
+                  // rel="noreferrer"
+                >
+                  <img src={QR} alt="hospital referral logo" width="110" />
+                </a>
+                <p className="p-12 text-black-50 ">scan to download </p>
               </div>
             </div>
           </div>
