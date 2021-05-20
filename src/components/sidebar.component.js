@@ -5,7 +5,7 @@ import logo from "./assests/hospital_referral_logo.png";
 function Sidebar() {
   return (
     <div
-      className="d-flex bg-light flex-column py-3 px-3 shadow"
+      className="d-flex bg-whitw flex-column py-3 px-3 shadow"
       style={{
         height: "100vh",
         position: "fixed",

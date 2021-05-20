@@ -15,7 +15,7 @@ function Loader() {
     >
       <div>
         <div
-          class="spinner-border bg-light"
+          class="spinner-border bg-white"
           style={{
             width: "5rem",
             height: "5rem",
