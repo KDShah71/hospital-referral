@@ -1,7 +1,7 @@
 import React from "react";
 
 import logo from "../../components/assests/hospital_referral_logo.png";
-import QR from "../../components/assests/hrs_mobile_app_qr.jpeg";
+import QR from "../../components/assests/hrs_mobile_app_qr_2.jpeg";
 import Footer from "../../components/footer.component";
 
 function Home({ children }) {
